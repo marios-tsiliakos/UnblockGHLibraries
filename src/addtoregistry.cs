@@ -7,6 +7,13 @@
     {
       System.IO.File.WriteAllLines(my_directory, my_text);
     }
-
     reg_file = my_directory;
   }
+  
+    //add the generated key to the registry (subject to admin rights)
+  private static void AddToRegistry(string d)
+  {
+    System.Diagnostics.Process regeditProcess = System.Diagnostics.Process.Start("regedit.exe", "\"" + d + "\"");
+    regeditProcess.WaitForExit();
+  }
+  
