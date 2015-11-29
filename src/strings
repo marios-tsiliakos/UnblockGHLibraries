@@ -2,6 +2,9 @@
   private string mes;
   private string mes01;
   
+    // get the local directory
+  private string my_userpath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+  
     //the contents of the registry file
   private static string[] unb_reg()
   {
